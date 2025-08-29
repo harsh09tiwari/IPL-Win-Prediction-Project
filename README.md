@@ -1,4 +1,5 @@
 # IPL Win Prediction Project
+https://ipl-win-prediction-project.streamlit.app/
 
 ## Overview
 This project aims to predict the outcome of IPL matches using machine learning techniques. The model analyzes various match features, team performance, and player statistics to provide real-time predictions.
@@ -13,7 +14,7 @@ This project aims to predict the outcome of IPL matches using machine learning t
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone 
+    git clone https://github.com/harsh09tiwari/IPL-Win-Prediction-Project.git
     ```
 2. Navigate to the project directory:
     ```bash
