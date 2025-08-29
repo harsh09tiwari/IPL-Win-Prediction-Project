@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import os
 
 teams = ['Sunrisers Hyderabad',
          'Mumbai Indians',
@@ -18,7 +19,23 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
           'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
           'Sharjah', 'Mohali', 'Bengaluru']
 
-pipe = pickle.load(open('pipe.pkl', 'rb'))
+# Check if the pickle file exists
+pickle_file_path = 'pipe.pkl'
+if not os.path.exists(pickle_file_path):
+    st.error("Model file 'pipe.pkl' not found. Please upload the model file.")
+    st.stop()
+
+try:
+    with open(pickle_file_path, 'rb') as file:
+        pipe = pickle.load(file)
+    st.success("Model loaded successfully!")
+except Exception as e:
+    st.error(f"Error loading model: {str(e)}")
+    st.error("This might be due to version incompatibility. Please check the following:")
+    st.error("1. scikit-learn version compatibility")
+    st.error("2. Python version compatibility")
+    st.error("3. All required dependencies are installed")
+    st.stop()
 st.title("IPL Win Predictor")
 
 col1, col2 = st.columns(2)
