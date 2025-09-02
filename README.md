@@ -1,5 +1,4 @@
 # IPL Win Prediction Project
-https://ipl-win-prediction-project.streamlit.app/
 
 ![alt text](image.png)
 
@@ -71,3 +70,8 @@ The code uses the trained model to make predictions on the test data.
 
 ## Data Visualization
 The code creates a line plot to visualize the progression of the match, including the number of wickets taken, runs scored, and the win and loss probabilities.
+
+
+
+
+https://ipl-win-prediction-project.streamlit.app/
